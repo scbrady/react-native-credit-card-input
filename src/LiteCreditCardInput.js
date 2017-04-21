@@ -51,6 +51,7 @@ const s = StyleSheet.create({
   },
   input: {
     color: "black",
+    fontSize: 16,
   },
 });
 
@@ -121,23 +122,21 @@ export default class LiteCreditCardInput extends Component {
 
     return (
       <View style={s.container}>
-        <View style={[
-          s.leftPart,
-          showRightPart ? s.hidden : s.expanded,
-        ]}>
-          <CCInput {...this._inputProps("number")}
-              containerStyle={s.numberInput} />
-        </View>
+        {!showRightPart &&
+          <View style={s.leftPart}>
+            <CCInput {...this._inputProps("number")}
+                containerStyle={s.numberInput} />
+          </View>
+        }
         <Image style={s.icon} source={{ uri: Icons[this._iconToShow()] }} />
-        <View style={[
-          s.rightPart,
-          showRightPart ? s.expanded : s.hidden,
-        ]}>
-          <CCInput {...this._inputProps("expiry")}
-              containerStyle={s.expiryInput} />
-          <CCInput {...this._inputProps("cvc")}
-              containerStyle={s.cvcInput} />
-        </View>
+        {showRightPart &&
+          <View style={s.rightPart}>
+            <CCInput {...this._inputProps("expiry")}
+                containerStyle={s.expiryInput} />
+            <CCInput {...this._inputProps("cvc")}
+                containerStyle={s.cvcInput} />
+          </View>
+        }
       </View>
     );
   }

@@ -1,6 +1,7 @@
 
 # React Native Credit Card Input
 Easy (and good looking) credit-card input for your React Native Project 💳 💳
+
 This is a fork that only has controlled input, will not work with the keyboard
 
 <p align="center">
@@ -11,8 +12,6 @@ This is a fork that only has controlled input, will not work with the keyboard
 Code:
 
 ```js
-<CreditCardInput onChange={this._onChange} />
-// or
 <LiteCreditCardInput onChange={this._onChange} />
 ```
 
@@ -73,7 +72,7 @@ _onChange => form => console.log(form);
 
 ## LiteCreditCardInput
 | Property | Type | Description |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 |onChange | PropTypes.func | Receives a `formData` object every time the form changes |
 |placeholders | PropTypes.object | Defaults to <br/>`{ number: "1234 5678 1234 5678", expiry: "MM/YY", cvc: "CVC" }` |
 |inputStyle | Text.propTypes.style | Style for credit-card form's textInput |

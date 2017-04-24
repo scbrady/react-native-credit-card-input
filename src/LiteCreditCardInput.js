@@ -26,16 +26,12 @@ const s = StyleSheet.create({
     height: 40,
     resizeMode: "contain",
   },
-  expanded: {
-    flex: 1,
-  },
-  hidden: {
-    width: 0,
-  },
   leftPart: {
+    flex: 1,
     overflow: "hidden",
   },
   rightPart: {
+    flex: 1,
     paddingLeft: 10,
     overflow: "hidden",
     flexDirection: "row",

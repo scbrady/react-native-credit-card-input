@@ -1,7 +1,9 @@
-import React, { Component, PropTypes } from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {
   View,
   Text,
+  ViewPropTypes,
 } from "react-native";
 
 export default class CCInput extends Component {
@@ -10,7 +12,7 @@ export default class CCInput extends Component {
     placeholder: PropTypes.string,
     status: PropTypes.oneOf(["valid", "invalid", "incomplete"]),
 
-    containerStyle: View.propTypes.style,
+    containerStyle: ViewPropTypes.style,
     inputStyle: Text.propTypes.style,
     validColor: PropTypes.string,
     invalidColor: PropTypes.string,

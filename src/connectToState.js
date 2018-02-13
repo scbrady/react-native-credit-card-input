@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import CCFieldFormatter from "./CCFieldFormatter";
 import CCFieldValidator from "./CCFieldValidator";
 import compact from "lodash.compact";
@@ -68,8 +69,8 @@ export default function connectToState(CreditCardInput) {
     render() {
       return (
         <CreditCardInput
-            {...this.props}
-            {...this.state} />
+          {...this.props}
+          {...this.state} />
       );
     }
   }

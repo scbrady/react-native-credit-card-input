@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {
   View,
   Text,
@@ -124,7 +125,7 @@ export default class LiteCreditCardInput extends Component {
                 containerStyle={s.numberInput} />
           </View>
         }
-        <Image style={s.icon} source={{ uri: Icons[this._iconToShow()] }} />
+        <Image style={s.icon} source={Icons[this._iconToShow()]} />
         {showRightPart &&
           <View style={s.rightPart}>
             <CCInput {...this._inputProps("expiry")}
